@@ -29,9 +29,6 @@ spec:
   template:
     metadata:
       annotations:
-        {{- if or .Values.catalogs .Values.additionalCatalogs }}
-        checksum/catalog-config: {{ include (print $.Template.BasePath "/configmap-catalog.yaml") . | sha256sum }}
-        {{- end }}
         checksum/worker-config: {{ include (print $.Template.BasePath "/configmap-worker.yaml") . | sha256sum }}
       {{- if .Values.worker.gracefulShutdown.enabled }}
         checksum/access-control-config: {{ include (print $.Template.BasePath "/configmap-access-control-worker.yaml") . | sha256sum }}
