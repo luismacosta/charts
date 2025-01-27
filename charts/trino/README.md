@@ -77,9 +77,6 @@ Fast distributed SQL query engine for big data analytics that helps you explore 
          ]
        }
   ```
-* `additionalCatalogs` - object, default: `{}`  
-
-  Deprecated, use `catalogs` instead. Configure additional [catalogs](https://trino.io/docs/current/installation/deployment.html#catalog-properties).
 * `additionalConfigProperties` - list, default: `[]`  
 
   [Additional config properties](https://trino.io/docs/current/admin/properties.html).
@@ -626,6 +623,9 @@ Fast distributed SQL query engine for big data analytics that helps you explore 
    - name: catalogs
      secretName: catalogs
      path: /etc/trino/catalog
+   - name: ldap
+     secretName: ldap
+     path: /etc/trino/ldap
   ```
 * `secrets` - list, default: `[]`
 * `securityContext` - object, default: `{"runAsGroup":1000,"runAsUser":1000}`  

@@ -336,10 +336,6 @@ catalogs:
 #    memory.max-data-per-node=128MB
 # ```
 
-additionalCatalogs: {}
-# additionalCatalogs -- Deprecated, use `catalogs` instead. Configure additional
-# [catalogs](https://trino.io/docs/current/installation/deployment.html#catalog-properties).
-
 env: []
 # env -- additional environment variables added to every pod, specified as a list with explicit values
 # @raw
@@ -479,6 +475,9 @@ secretMounts: []
 #  - name: catalogs
 #    secretName: catalogs
 #    path: /etc/trino/catalog
+#  - name: ldap
+#    secretName: ldap
+#    path: /etc/trino/ldap
 # ```
 
 coordinator:
