@@ -1074,7 +1074,7 @@ catalogsSecrets: []
   #       connection-url=
   #       postgresql.array-mapping=
   #       connection-password=
-
+ldapSecrets: []
   #  - name: ldap
   #    value:
   #      ldap.properties: |
